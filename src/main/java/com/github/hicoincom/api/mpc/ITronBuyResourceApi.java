@@ -4,6 +4,8 @@ import com.github.hicoincom.api.bean.mpc.TronBuyResourceArgs;
 import com.github.hicoincom.api.bean.mpc.TronBuyResourceRecordResult;
 import com.github.hicoincom.api.bean.mpc.TronBuyResourceResult;
 import com.github.hicoincom.api.bean.mpc.TronFeeRuleResult;
+import com.github.hicoincom.api.bean.mpc.TronReclaimArgs;
+import com.github.hicoincom.api.bean.mpc.TronReclaimResult;
 
 import java.util.List;
 
@@ -51,5 +53,16 @@ public interface ITronBuyResourceApi {
      * single_price_trx, type and price_sun
      */
     TronFeeRuleResult getTronFeeRule();
+
+    /**
+     * Reclaim TRON resource
+     * Actively reclaim previously delegated TRON resources by request ID.
+     * https://custodydocs-zh.chainup.com/api-references/mpc-apis/apis/tron/reclaim
+     *
+     * @param reclaimArgs required: true
+     *                    arguments for reclaiming TRON resources; must contain the request_id of the original delegate
+     * @return TronReclaimResult the reclaim result, contains the request_id on success
+     */
+    TronReclaimResult reclaimTronResource(TronReclaimArgs reclaimArgs);
 
 }
