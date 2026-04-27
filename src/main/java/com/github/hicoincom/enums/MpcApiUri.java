@@ -184,7 +184,6 @@ public enum MpcApiUri {
     /**
      * Reclaim Tron Resource
      * Actively reclaim previously delegated TRON resources by request ID.
-     * https://custodydocs-zh.chainup.com/api-references/mpc-apis/apis/tron/reclaim
      */
     TRON_RECLAIM("/api/mpc/tron/reclaim", HttpPost.METHOD_NAME),
 

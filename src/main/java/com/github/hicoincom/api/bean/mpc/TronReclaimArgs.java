@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * @author ChainUp Custody
- * TronReclaimArgs args, https://custodydocs-zh.chainup.com/api-references/mpc-apis/apis/tron/reclaim
+ * TronReclaimArgs args
  */
 public class TronReclaimArgs extends BaseArgs implements Serializable {
 

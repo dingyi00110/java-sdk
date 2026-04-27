@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * @author ChainUp Custody
- * TronReclaimResult, https://custodydocs-zh.chainup.com/api-references/mpc-apis/apis/tron/reclaim
+ * TronReclaimResult
  */
 public class TronReclaimResult extends Result<TronReclaim> implements Serializable {
 
