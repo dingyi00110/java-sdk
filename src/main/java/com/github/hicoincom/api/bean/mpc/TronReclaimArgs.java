@@ -14,7 +14,7 @@ public class TronReclaimArgs extends BaseArgs implements Serializable {
     private static final long serialVersionUID = 7392845610234781920L;
 
     /**
-     * The unique identifier for the reclaim request
+     *  The request_id from when the created delegate.
      * required : true
      */
     @JSONField(name = "request_id")
