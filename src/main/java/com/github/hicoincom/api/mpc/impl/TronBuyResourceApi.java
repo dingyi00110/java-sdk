@@ -9,6 +9,8 @@ import com.github.hicoincom.api.bean.mpc.TronBuyResourceArgs;
 import com.github.hicoincom.api.bean.mpc.TronBuyResourceRecordResult;
 import com.github.hicoincom.api.bean.mpc.TronBuyResourceResult;
 import com.github.hicoincom.api.bean.mpc.TronFeeRuleResult;
+import com.github.hicoincom.api.bean.mpc.TronReclaimArgs;
+import com.github.hicoincom.api.bean.mpc.TronReclaimResult;
 import com.github.hicoincom.api.mpc.ITronBuyResourceApi;
 import com.github.hicoincom.crypto.IDataCrypto;
 import com.github.hicoincom.enums.MpcApiUri;
@@ -61,5 +63,14 @@ public class TronBuyResourceApi extends WaasApi implements ITronBuyResourceApi {
     public TronFeeRuleResult getTronFeeRule() {
         BaseArgs args = new BaseArgs();
         return this.invoke(MpcApiUri.GET_TRON_FEE_RULE, args, TronFeeRuleResult.class);
+    }
+
+    @Override
+    public TronReclaimResult reclaimTronResource(TronReclaimArgs reclaimArgs) {
+        if (ObjectUtils.isEmpty(reclaimArgs) || StringUtils.isEmpty(reclaimArgs.getRequestId())) {
+            throw new ArgsNullException("mpc reclaimArgs or request_id args empty");
+        }
+
+        return this.invoke(MpcApiUri.TRON_RECLAIM, reclaimArgs, TronReclaimResult.class);
     }
 }

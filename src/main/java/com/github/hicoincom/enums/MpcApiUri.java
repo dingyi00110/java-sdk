@@ -181,6 +181,12 @@ public enum MpcApiUri {
      */
     GET_TRON_FEE_RULE("/api/mpc/tron/delegate/fee_rule", HttpPost.METHOD_NAME),
 
+    /**
+     * Reclaim Tron Resource
+     * Actively reclaim previously delegated TRON resources by request ID.
+     */
+    TRON_RECLAIM("/api/mpc/tron/reclaim", HttpPost.METHOD_NAME),
+
     ;
 
     private String value;
