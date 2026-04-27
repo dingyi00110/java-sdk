@@ -56,9 +56,7 @@ public interface ITronBuyResourceApi {
 
     /**
      * Reclaim TRON resource
-     * Actively reclaim previously delegated TRON resources by request ID.
-     * https://custodydocs-zh.chainup.com/api-references/mpc-apis/apis/tron/reclaim
-     *
+     * Actively reclaim previously delegated TRON resources by request ID.*
      * @param reclaimArgs required: true
      *                    arguments for reclaiming TRON resources; must contain the request_id of the original delegate
      * @return TronReclaimResult the reclaim result, contains the request_id on success
