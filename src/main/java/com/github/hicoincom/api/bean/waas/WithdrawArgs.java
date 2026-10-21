@@ -32,6 +32,9 @@ public class WithdrawArgs extends BaseArgs implements Serializable {
     @JSONField(name ="check_sum")
     private String checkSum;
 
+    private String remark;
+
+
     public String getRequestId() {
         return requestId;
     }
@@ -78,5 +81,13 @@ public class WithdrawArgs extends BaseArgs implements Serializable {
 
     public void setCheckSum(String checkSum) {
         this.checkSum = checkSum;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }
